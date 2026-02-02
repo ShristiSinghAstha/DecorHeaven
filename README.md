@@ -1,4 +1,4 @@
-🏡Decor Heaven – Home Décor E-Commerce Website
+🏡Decor Heaven – Home Decor E-Commerce Website
 
 Decor Heaven is a modern e-commerce website designed for browsing and shopping home décor products. The project focuses on clean UI design, responsive layouts, and smooth user experience, simulating a real-world online shopping platform.
 
