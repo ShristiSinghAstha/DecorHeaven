@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Decor Heaven</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Decor Heaven</a>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Auth & Cart -->
+            <div class="nav-actions">
+                <button id="loginBtnNav" class="auth-btn">Login</button>
+                <div id="userMenu" class="user-menu hidden">
+                    <span id="userNameDisplay">User</span>
+                    <a href="profile.html" class="auth-link" style="color: var(--color-primary);">Profile</a>
+                    <button id="logoutBtn" class="auth-link">Logout</button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Shop Our Collection</h1>
+            <p>Browse through our curated selection of premium home decoration items.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" style="padding-top: 60px;">
+        <div class="container">
+            <div class="shop-header">
+                <h2 class="section-title">All Products</h2>
+                <div class="shop-controls">
+                    <div class="items-count">
+                        <p id="itemsCount">Showing 12 items</p>
+                    </div>
+                </div>
+            </div>
+            <div id="productsGrid" class="products-grid">
+                <!-- Products will be injected here by JS -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <h3 class="product-title">Loading...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p style="text-align: center; color: var(--color-text-light); margin-top: 32px;">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals (Injected by JS) -->
+    <div id="authContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Decor Heaven. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        // Update item count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const itemsCount = document.getElementById('itemsCount');
+            if (itemsCount && window.products) {
+                itemsCount.textContent = `Showing ${window.products.length} items`;
+            }
+        });
+    </script>
+</body>
+
+</html>

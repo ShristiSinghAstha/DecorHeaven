@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Decor Heaven</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Decor Heaven</a>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Auth & Cart -->
+            <div class="nav-actions">
+                <button id="loginBtnNav" class="auth-btn">Login</button>
+                <div id="userMenu" class="user-menu hidden">
+                    <span id="userNameDisplay">User</span>
+                    <a href="profile.html" class="auth-link" style="color: var(--color-primary);">Profile</a>
+                    <button id="logoutBtn" class="auth-link">Logout</button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Bringing warmth, elegance, and soul to every corner of your home.</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>Founded in 2024, <strong>Decor Heaven</strong> started with a simple idea: that your home should
+                        be a reflection of your inner self. We believe that true luxury lies in the details—the curve of
+                        a vase, the texture of a pillow, the warm glow of a lamp.</p>
+                    <p>We curate pieces that are not just beautiful, but meaningful. Crafted by artisans and selected
+                        with care, our collection is designed to help you create a space that feels uniquely yours.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://www.hindustantimes.com/ht-img/img/2024/05/17/550x309/L_U_X_U_R_Y_H_A_L_L_1715956191481_1715956321541.jpg" alt="Our Studio">
+                </div>
+            </div>
+
+            <div class="mission-section">
+                <h2>Our Mission</h2>
+                <div class="mission-cards">
+                    <div class="mission-card">
+                        <i data-feather="heart"></i>
+                        <h3>Passion</h3>
+                        <p>We love what we do, and we want you to love your home.</p>
+                    </div>
+                    <div class="mission-card">
+                        <i data-feather="award"></i>
+                        <h3>Quality</h3>
+                        <p>Premium materials and craftsmanship in every item.</p>
+                    </div>
+                    <div class="mission-card">
+                        <i data-feather="globe"></i>
+                        <h3>Sustainability</h3>
+                        <p>Eco-friendly packaging and ethically sourced materials.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-gallery-section">
+                <h2>Our Collection</h2>
+                <div id="aboutGallery" class="about-gallery"></div>
+            </div>
+
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>Have questions? We'd love to hear from you.</p>
+                <p>Email: <strong>hello@decorheaven.com</strong></p>
+                <p>Phone: <strong>+1 (555) 123-4567</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar (Shared) -->
+    <!-- <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                Cart items will be here -->
+            <!-- </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Auth Modals (Injected by JS) -->
+    <!-- <div id="authContainer"></div> -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Decor Heaven. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

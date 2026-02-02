@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor Heaven | Premium Home Decoration</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Decor Heaven</a>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Auth & Cart -->
+            <div class="nav-actions">
+                <button id="loginBtnNav" class="auth-btn">Login</button>
+                <div id="userMenu" class="user-menu hidden">
+                    <span id="userNameDisplay">User</span>
+                    <a href="profile.html" class="auth-link" style="color: var(--color-primary);">Profile</a>
+                    <button id="logoutBtn" class="auth-link">Logout</button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Decorate Your Dreams</h1>
+            <p>Discover our curated collection of premium home details that bring warmth and elegance to your space.</p>
+            <a href="shop.html" class="cta-btn">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Decor Heaven</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="users"></i>
+                    </div>
+                    <h3 class="stat-number">45,000+</h3>
+                    <p class="stat-label">Happy Customers</p>
+                    <p class="stat-description">Join thousands of satisfied customers who have transformed their spaces.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="package"></i>
+                    </div>
+                    <h3 class="stat-number">12,500+</h3>
+                    <p class="stat-label">Products Sold</p>
+                    <p class="stat-description">From premium vases to elegant furniture, we have it all.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="globe"></i>
+                    </div>
+                    <h3 class="stat-number">150+</h3>
+                    <p class="stat-label">Countries Reached</p>
+                    <p class="stat-description">Delivering premium home decor to customers worldwide.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="star"></i>
+                    </div>
+                    <h3 class="stat-number">4.8/5</h3>
+                    <p class="stat-label">Customer Rating</p>
+                    <p class="stat-description">Consistent excellence with an average 4.8-star rating.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="truck"></i>
+                    </div>
+                    <h3 class="stat-number">48hrs</h3>
+                    <p class="stat-label">Fast Shipping</p>
+                    <p class="stat-description">Free shipping on orders over $50 with express delivery options.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-feather="award"></i>
+                    </div>
+                    <h3 class="stat-number">8 Years</h3>
+                    <p class="stat-label">Industry Experience</p>
+                    <p class="stat-description">Over a decade of expertise in premium home decoration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Our Commitment</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Curated Collections</h4>
+                    <p>Every item is handpicked by our design experts to ensure quality and style.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Sustainable Materials</h4>
+                    <p>We prioritize eco-friendly products that are beautiful and responsible.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Expert Support</h4>
+                    <p>Our team is available 24/7 to help you find the perfect decor for your home.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Quality Guaranteed</h4>
+                    <p>All products come with a satisfaction guarantee and easy returns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be here -->
+                <p style="text-align: center; color: var(--color-text-light); margin-top: 32px;">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals (Injected by JS) -->
+    <div id="authContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Decor Heaven. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

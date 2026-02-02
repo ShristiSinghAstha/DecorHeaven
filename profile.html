@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | Decor Heaven</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Decor Heaven</a>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- Auth & Cart -->
+            <div class="nav-actions">
+                <button id="loginBtnNav" class="auth-btn">Login</button>
+                <div id="userMenu" class="user-menu hidden">
+                    <span id="userNameDisplay">User</span>
+                    <a href="profile.html" class="auth-link" style="color: var(--color-primary);">Profile</a>
+                    <button id="logoutBtn" class="auth-link">Logout</button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <section class="about-hero" style="background-color: var(--color-white); padding-bottom: 40px;">
+        <div class="container">
+            <div id="profileAvatarContainer"
+                style="width: 100px; height: 100px; background-color: var(--color-secondary); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--color-primary-dark); font-weight: 700; overflow: hidden;">
+                <i data-feather="user"></i>
+            </div>
+            <div style="text-align: center; margin-bottom: 15px;">
+                <input type="file" id="profileUpload" accept="image/*" style="display: none;">
+                <button id="changePhotoBtn"
+                    style="background: none; border: 1px solid var(--color-primary); padding: 5px 10px; border-radius: 4px; cursor: pointer; color: var(--color-primary-dark); font-size: 0.8rem;">Change
+                    Photo</button>
+            </div>
+            <h1 id="profileName">User</h1>
+            <p id="profileUsername">@username</p>
+        </div>
+    </section>
+
+    <!-- Wishlist Section -->
+    <section class="container" style="margin-bottom: 80px;">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; border-bottom: 1px solid var(--color-secondary); padding-bottom: 16px;">
+            <h2 style="font-size: 24px; color: var(--color-primary-dark);">My Wishlist</h2>
+            <span id="profileWishlistCount" style="color: var(--color-text-light);">0 items</span>
+        </div>
+
+        <div id="profileWishlistGrid" class="products-grid">
+            <!-- Wishlist items will be injected here -->
+            <p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-light);">Loading wishlist...</p>
+        </div>
+    </section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p style="text-align: center; color: var(--color-text-light); margin-top: 32px;">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals (Injected by JS) -->
+    <div id="authContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Decor Heaven. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

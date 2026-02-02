@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Decor Heaven</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Decor Heaven</a>
+            <ul class="nav-links hidden-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="new-arrivals.html">New Arrivals</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <!-- Auth & Cart -->
+            <div class="nav-actions">
+                <button id="loginBtnNav" class="auth-btn">Login</button>
+                <div id="userMenu" class="user-menu hidden">
+                    <span id="userNameDisplay">User</span>
+                    <a href="profile.html" class="auth-link">Profile</a>
+                    <button id="logoutBtn" class="auth-link">Logout</button>
+                </div>
+                <button class="cart-btn" id="cartBtn">
+                    <i data-feather="shopping-bag"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Reach out for any inquiries.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="container" style="margin-bottom: 80px;">
+        <div class="contact-section">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: 32px; color: var(--color-text-light);">
+                Have a question about a product? Need help with an order? Fill out the form below and we'll get back to
+                you as soon as possible.
+            </p>
+
+            <form style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" required placeholder="How can we help?"
+                        style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: var(--radius-sm); font-family: var(--font-body);"></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">Send
+                    Message</button>
+            </form>
+        </div>
+
+        <div class="mission-cards">
+            <div class="mission-card">
+                <i data-feather="mail"></i>
+                <h3>Email Us</h3>
+                <p>support@decorheaven.com</p>
+            </div>
+            <div class="mission-card">
+                <i data-feather="phone"></i>
+                <h3>Call Us</h3>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="mission-card">
+                <i data-feather="map-pin"></i>
+                <h3>Visit Us</h3>
+                <p>123 Design Avenue, Creative City, ST 90210</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Overlay (Shared) -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" id="closeCart">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p style="text-align: center; color: var(--color-text-light); margin-top: 32px;">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="alert('Proceeding to checkout...')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modals (Injected by JS) -->
+    <div id="authContainer"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Decor Heaven. Crafted with care.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
