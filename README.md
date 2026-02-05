@@ -32,9 +32,9 @@ JavaScript – Interactivity and dynamic behavior
 
 Styling & UI:
 
-CSS Flexbox / Grid – Responsive layouts
+CSS Flexbox – Responsive layouts
 
-Custom CSS / Tailwind (if used) – Modern UI design
+Custom CSS – Modern UI design
 
 
 Tools:
